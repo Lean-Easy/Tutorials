@@ -1,2 +1,5 @@
 "id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-employee_employee_everyone, employee.employee.everyone.access,model_employee_employee,base.group_user,1,1,1,1
+employee_employee_everyone, employee.employee.everyone.access,model_employee_employee,base.group_user,0,0,0,0
+employee_employee_read, employee.employee.read.access,model_employee_employee,security_groups.employee_employee_read,1,0,0,0
+employee_employee_write, employee.employee.write.access,model_employee_employee,security_groups.employee_employee_write,1,1,0,0
+employee_employee_administrator, employee.employee.administrator.access,model_employee_employee,security_groups.employee_employee_administrator,1,1,1,1

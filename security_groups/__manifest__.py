@@ -8,7 +8,9 @@
     'website': "https://www.leaneasy.co.uk",
     'depends': ['base'],
     'data': [
+        'security/employee_security.xml',
         'security/ir.model.access.csv',
+
         'views/employee_view.xml',
     ],
     'installable': True,

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Allows the access rules to appear on the user edit form -->
+    <record model="ir.module.category" id="module_employee_employee">
+        <field name="name">Employees</field>
+        <field name="description">User access level for the Employees module</field>
+        <field name="sequence">201</field>
+        <field name="parent_id" ref="base.module_category_human_resources" />
+    </record>
+
+    <!-- Read user group -->
+    <record id="employee_employee_read" model="res.groups">
+        <field name="name">Read</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        <field name="category_id" ref="security_groups.module_employee_employee" />
+    </record>
+
+    <!-- Write user group  -->
+    <record id="employee_employee_write" model="res.groups">
+        <field name="name">Write</field>
+        <field name="implied_ids" eval="[(4, ref('security_groups.employee_employee_read'))]" />
+        <field name="category_id" ref="security_groups.module_employee_employee" />
+    </record>
+
+    <!-- Administrator user group -->
+    <record id="employee_employee_administrator" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="implied_ids" eval="[(4, ref('security_groups.employee_employee_write'))]" />
+        <field name="category_id" ref="security_groups.module_employee_employee" />
+    </record>
+</odoo>
