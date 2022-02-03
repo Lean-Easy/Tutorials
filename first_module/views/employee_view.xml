@@ -22,8 +22,8 @@
                 <form string="Employee">
                     <sheet>
                         <field name="currency_id" invisible="1" />
+                        <field name="photo" nolabel="1" widget="image" class="oe_avatar" />
                         <group>
-                            <field name="photo" nolabel="1" widget="image" class="oe_avatar" />
                             <group>
                                 <field name="forename" />
                                 <field name="dob" />
