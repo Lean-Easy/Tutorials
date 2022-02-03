@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="employee_take_photo" model="mail.activity.type">
+            <field name="name">Please take a photo for the employee</field>
+            <field name="icon">fa-camera</field>
+            <field name="delay_count">0</field>
+            <field name="sequence">5</field>
+            <field name="active">True</field>
+            <field name="category">employee_take_photo</field>
+        </record>
+    </data>
+</odoo>
