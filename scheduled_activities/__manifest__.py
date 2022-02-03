@@ -3,7 +3,7 @@
     'name': 'Scheduled Activity Example',
     'version': '1.0.0',
     'category': 'Extra Tools',
-    'summary': 'An example of a model and a view for an Employee',
+    'summary': 'An example of how to create scheduled activities in Odoo',
     'author': "Lean Easy",
     'website': "https://www.leaneasy.co.uk",
     'depends': ['base', 'mail'],
