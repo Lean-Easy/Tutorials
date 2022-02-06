@@ -17,3 +17,13 @@ class Employee(models.Model):
     salary = fields.Monetary(string="Salary", currency_field='currency_id')
     photo = fields.Image(string="Photo")
     nationality = fields.Many2one('res.country', string="Nationality")
+
+    def _update_salary_quarterly(self):
+        """
+        Example of cron job function:
+        Updates employee salary quarterly
+        """
+        employees = self.env['employee.employee'].sudo().search([])
+
+        for rec in employees:
+            rec.salary += 500

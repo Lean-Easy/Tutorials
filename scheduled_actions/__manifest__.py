@@ -10,6 +10,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/employee_view.xml',
+
+        'data/ir_cron.xml'
     ],
     'installable': True,
     'auto_install': False,
