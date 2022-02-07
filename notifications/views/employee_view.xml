@@ -20,6 +20,24 @@
             <field name="model">employee.employee</field>
             <field name="arch" type="xml">
                 <form string="Employee">
+                    <header>
+                        <button string="Success"
+                                type="object"
+                                name="show_notification_success"
+                                class="oe_highlight"/>
+                        <button string="Warning"
+                                type="object"
+                                name="show_notification_warning"
+                                class="oe_highlight"/>
+                        <button string="Danger"
+                                type="object"
+                                name="show_notification_danger"
+                                class="oe_highlight"/>
+                        <button string="Info"
+                                type="object"
+                                name="show_notification_info"
+                                class="oe_highlight"/>
+                    </header>
                     <sheet>
                         <field name="currency_id" invisible="1" />
                         <field name="photo" nolabel="1" widget="image" class="oe_avatar" />
