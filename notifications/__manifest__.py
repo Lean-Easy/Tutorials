@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Notification Example',
+    'name': 'Employee Example',
     'version': '1.0.0',
     'category': 'Extra Tools',
-    'summary': 'An example of a how to create notifications in Odoo.',
+    'summary': 'An example of a model and a view for an Employee',
     'author': "Lean Easy",
     'website': "https://www.leaneasy.co.uk",
     'depends': ['base'],
