@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_id" model="ir.sequence">
+            <field name="name">Employee Sequence</field>
+            <field name="code">employee.employee</field>
+            <field name="prefix">EMP/</field>
+            <field name="number_increment">1</field>
+            <field name="padding">5</field>
+            <!-- <field name="prefix">EMP/%(range_year)s/</field> -->
+            <!-- <field name="use_date_range">True</field> -->
+        </record>
+
+        <!-- <record id="date_range" model="ir.sequence.date_range">
+            <field name="date_from">2022-01-01</field>
+            <field name="date_to">2022-12-31</field>
+            <field name="number_next_actual">1</field>
+            <field name="sequence_id" ref="sequence_id"/>
+        </record> -->
+    </data>
+</odoo>

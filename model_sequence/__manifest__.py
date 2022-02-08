@@ -10,6 +10,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/employee_view.xml',
+
+        'data/ir_sequence.xml'
     ],
     'installable': True,
     'auto_install': False,
