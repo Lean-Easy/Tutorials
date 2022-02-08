@@ -20,6 +20,10 @@
             <field name="model">employee.employee</field>
             <field name="arch" type="xml">
                 <form string="Employee">
+                    <header>
+                        <button name="verify" type="object" string="Verify" states="draft" class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,verified"/>
+                    </header>
                     <sheet>
                         <field name="currency_id" invisible="1" />
                         <field name="photo" nolabel="1" widget="image" class="oe_avatar" />
