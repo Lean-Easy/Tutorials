@@ -20,6 +20,9 @@
             <field name="model">employee.employee</field>
             <field name="arch" type="xml">
                 <form string="Employee">
+                    <header>
+                        <button string="Create Meeting" type="object" name="open_meeting_wizard" class="oe_highlight"/>
+                    </header>
                     <sheet>
                         <field name="currency_id" invisible="1" />
                         <field name="photo" nolabel="1" widget="image" class="oe_avatar" />
@@ -34,6 +37,9 @@
                                 <field name="salary" widget="monetary" />
                                 <field name="nationality" />
                             </group>
+                        </group>
+                        <group>
+                            <field name="note"/>
                         </group>
                     </sheet>
                 </form>

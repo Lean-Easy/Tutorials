@@ -17,3 +17,17 @@ class Employee(models.Model):
     salary = fields.Monetary(string="Salary", currency_field='currency_id')
     photo = fields.Image(string="Photo")
     nationality = fields.Many2one('res.country', string="Nationality")
+
+    note = fields.Text(string="Notes")
+
+    def open_meeting_wizard(self):
+        return {
+            'name': 'Add Meeting Notes',
+            'type': 'ir.actions.act_window',
+            'res_model': 'employee.meeting',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_employee_id': self.id,
+            }
+        }
