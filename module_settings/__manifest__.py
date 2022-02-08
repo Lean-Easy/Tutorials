@@ -10,6 +10,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/employee_view.xml',
+
+        'views/res_config_settings.xml'
     ],
     'installable': True,
     'auto_install': False,

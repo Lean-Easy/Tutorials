@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_inherit_employee" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Module Setting Example" string="Module Setting Example" data-key="module_settings" groups="base.group_user">
+                        <h2>Module Setting Example</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"></div>
+                                <div class="o_setting_right_pane">
+                                    <label for="default_salary"/>
+                                    <div class="text-muted">
+                                        <p>Set the default value for salary for a new employee.</p>
+                                    </div>
+                                    <div class="content-group mt16">
+                                        <field name="currency_id" invisible="1"/>
+                                        <field name="default_salary" widget="monetary" options="{'currency_field': 'currency_id'}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
