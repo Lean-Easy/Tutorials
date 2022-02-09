@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+        <record id="email.email_template_employee" model="mail.template">
+            <field name="name">Employee Raffle</field>
+            <field name="model_id" ref="email.model_employee_employee"/>
+            <field name="subject">Employee Raffle!</field>
+            <field name="body_html" type="html">
+                <div>
+                    <p style="font-size:10.0pt;font-family:&quot;Roboto&quot;">
+                        Dear <t t-out="object.forename"/> <t t-out="object.surname"/>,
+
+                        <br />
+                        <br />
+                        
+                        Your salary has increased by
+                        <t t-if="object.salary &gt;= 35000">
+                            £1000.
+                        </t>
+                        <t t-elif="object.salary &gt; 25000">
+                            £500.
+                        </t>
+                        <t t-else="">
+                            £300.
+                        </t>
+                        
+                        <br />
+                        <br />
+
+                        Kind Regards,
+                        <br />
+                        Your Company
+                    </p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>
