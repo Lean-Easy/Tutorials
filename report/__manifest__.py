@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Simple Report Example',
+    'name': 'Report Example',
     'version': '1.0.0',
     'category': 'Extra Tools',
-    'summary': 'An example of a how to create a simple report in Odoo',
+    'summary': 'An example of a how to create a report in Odoo',
     'author': "Lean Easy",
     'website': "https://www.leaneasy.co.uk",
     'depends': ['base'],
